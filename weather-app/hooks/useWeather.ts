@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { getWeather } from "@/utils/getOpenWeather";
+import {WeatherData} from "@/types/types";
 
 interface UseWeatherReturn {
   city: string;
