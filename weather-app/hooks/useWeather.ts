@@ -1,15 +1,23 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { getWeather } from "@/utils/getOpenWeather";
 
-export function useWeather() {
-  const [city, setCity] = useState("");
-  const [weather, setWeather] = useState(null);
+interface UseWeatherReturn {
+  city: string;
+  setCity: React.Dispatch<React.SetStateAction<string>>;
+  weather: WeatherData | null;
+  error: string | null;
+  searchCity: () => Promise<void>;
+}
+
+export function useWeather(): UseWeatherReturn {
+  const [city, setCity] = useState<string>("");
+  const [weather, setWeather] = useState<WeatherData | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const searchCity = async () => {
+  const searchCity = async (): Promise<void> => {
     try {
-      const data = await getWeather(city);
+      const data: WeatherData = await getWeather(city);
       setWeather(data);
       setError(null);
     } catch {
@@ -26,3 +34,4 @@ export function useWeather() {
     searchCity,
   };
 }
+
