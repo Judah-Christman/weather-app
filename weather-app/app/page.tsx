@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from "react";
+"use client"
+import React from "react";
 import { useWeather } from "@/hooks/useWeather";
 import WeatherCard from "@/components/WeatherCard";
 import SearchComponent from "@/components/SearchComponent";
