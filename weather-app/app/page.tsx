@@ -14,7 +14,7 @@ export default function WeatherApp(){
       <div className="w-full h-[100px] grid grid-cols-2 gap-4 bg-[#61A3FF]">
         <div className="flex flex-row items-center justify-center">
           <h1 className="text-[#fefefe] text-5xl font-semibold mx-5">Weather App</h1>
-          <Image src="/icons/sunny-cloud.png" width={80} height={80}/>
+          <Image src="/icons/sunny-cloud.png" width={80} height={80} alt="image" />
         </div>
         <div className="flex flex-col items-center justify-center">
           <SearchComponent {...weatherState}/>
