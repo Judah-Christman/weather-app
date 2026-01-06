@@ -10,11 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
-<<<<<<< HEAD
-    "next": "15.4.10",
-=======
     "next": "^15.5.9",
->>>>>>> 0e8e30d (redesigned UI)
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
