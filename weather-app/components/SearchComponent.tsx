@@ -21,12 +21,18 @@ export default function SearchComponent({
       }}
     >
       <input
+        className="bg-[#fefefe] text-lg text-[#8F8F8F] rounded-md p-2"
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city"
+        placeholder="City name..."
       />
-      <button type="submit">Search</button>
+      <button 
+        className="text-[#fefefe] text-lg p-2 mx-1 hover:cursor-pointer border border-[#fefefe] rounded-md"
+        type="submit"
+      >
+        Search
+      </button>
     </form>
   );
 }

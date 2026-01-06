@@ -24,11 +24,11 @@ export default function WeatherCard({ weather, error }: WeatherCardProps) {
 
   return (
     <div className="w-1/2">
-      {error && <p className="text-red-400">{error}</p>}
+      {error && <p className="mt-20 flex item-center justify-center text-red-400">{error}</p>}
 
       {weather && (
-        <div className="my-5 p-5 rounded-md bg-blue-400">
-          <h2 className="w-full text-black font-bold text-xl text-center mb-5">
+        <div className="my-20 p-5 rounded-md bg-blue-400">
+          <h2 className="w-full text-[#fefefe] font-bold text-3xl text-center mb-5">
             {weather.name}
           </h2>
 
@@ -42,14 +42,14 @@ export default function WeatherCard({ weather, error }: WeatherCardProps) {
               />
             </div>
 
-            <div className="bg-background p-2 rounded-md">
-              <p className="text-center underline">
-                {weather.weather[0].description.toUpperCase()}
+            <div className="p-2 rounded-md">
+              <p className="text-lg text-[#fefefe]">
+                {weather.weather[0].description}
               </p>
-              <p className="my-1">
+              <p className="text-lg text-[#fefefe] my-1">
                 Temperature: {Math.round((weather.main.temp * 9) / 5 + 32)} °F
               </p>
-              <p className="my-1">
+              <p className="text-lg text-[#fefefe] my-1">
                 Humidity: {weather.main.humidity}%
               </p>
             </div>
